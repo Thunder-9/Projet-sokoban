@@ -25,7 +25,7 @@
 #ifndef ___CONSTANTES_H
 #define ___CONSTANTES_H
 // La taille du sudoku
-#define N 30
+#define N ...//à def
 
 // La valeur pour une case
 #define VIDE 0

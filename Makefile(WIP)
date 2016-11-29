@@ -1,0 +1,52 @@
+CFLAGS=-c -g -Wall 
+
+all: sokoban
+	./sokoban
+
+sokoban: sokoban.o affichage.o action.o niveau.o
+	gcc -o sokoban sokoban.o affichage.o action.o niveau.o -luvsqgraphics `sdl-config --libs` -lm -lSDL_ttf
+
+sokoban.o: sokoban.c sokoban.h constantes.h niveau.h 
+	gcc $(CFLAGS) sokoban.c
+
+affichage.o: affichage.c affichage.h sokoban.h constantes.h
+	gcc $(CFLAGS) `sdl-config --cflags` affichage.c
+
+action.o: action.c action.h constantes.h
+	gcc $(CFLAGS) `sdl-config --cflags` action.c
+
+niveau.o: niveau.c constantes.h sudoku.h
+	gcc $(CFLAGS) `sdl-config --cflags` niveau.c 
+
+clean:
+	rm -f sokoban
+	rm -f sokoban.o
+	rm -f affichage.o
+	rm -f action.o
+	rm -f niveau.o 
+
+compil:
+
+
+test:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
