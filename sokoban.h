@@ -26,7 +26,7 @@
 #ifndef SOKOBAN_H
 #define SOKOBAN_H
 
-//on fait le choix qu'au début d'un niveau
+//on fait le choix qu'au début d'un niveau,
 //(c'est à dire qu'il n'y a pas encore eu d'action)
 //l'historique est vide  
 
@@ -34,12 +34,12 @@
 struct une_case {
 		char element; // mur,rangement,personnage ...
 		struct une_case *suivant;
-		struct une_case *precedant;
-		// éléments se trouvant autour de la case 
-		// struct une_case *haut;
-		// struct une_case *gauche;
-		// struct une_case *droit;
-		// struct une_case *bas;
+		struct une_case *precedant; 
+		// cases aux alentour 
+        struct une_case *haut
+		struct une_case *gauche;
+		struct une_case *droit;
+		struct une_case *bas;
 } une_case; 
 // structure pour stocker la position du personnage 
 struct personnage {

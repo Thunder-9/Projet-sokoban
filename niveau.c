@@ -23,10 +23,45 @@
 
 
 #include <stdio.h>
+#include "constantes.h"
+#include "sudoku.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
 
-int main(int argc, char **argv)
-{
+
+
+void charger_niveau (char* str,int num_niveau){
+	int x,y;
+	SOKOBAN S; 
+	int tmp;
+	FILE* fic = fopen(str , "r");
+	if(fic==NULL){
+		printf("échec ouverture fichier %s", str);
+		exit(EXIT_FAILURE);
+	}
+	//+cas le fichier ne se termine pas par .xsb
 	
-	return 0;
+	tmp=fgetc(fic)
+	while (tmp != num_niveau){  //on se place au numéro du niveau voulu
+		tmp=fgetc(fic) 
+		if (tmp == EOF){
+			printf("le niveau numéro %d n'a pas été trouvé dans le fichier %s",numero_niveau,str);
+			exit(EXIT_FAILURE);
+	}
+/* set long position du niveau = long ftell(FILE* pointeurSurFichier);
+utiliser la même fonction que wc.c(dans IN301) pour avoir le nb de ligne 
+* reset la position à position du niv avec fseek
+*écrire une fonction pour avoir la longueur de ligne maximal
+* rest la position
+* charger le niv case par case
+* */ 
+	
+	
+	
+	fclose(fic); 
+
 }
+	
 

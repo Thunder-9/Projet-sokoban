@@ -23,10 +23,8 @@
 
 
 #include <stdio.h>
+#include <string.h>
 
-int main(int argc, char **argv)
-{
-	
-	return 0;
-}
+void charger_niveau (SOKOBAN S);
+void creer_niveau (char* str);
 
