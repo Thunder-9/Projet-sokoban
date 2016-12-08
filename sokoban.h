@@ -36,10 +36,10 @@ struct une_case {
 		struct une_case *suivant;
 		struct une_case *precedant; 
 		// cases aux alentour 
-        struct une_case *haut
-		struct une_case *gauche;
-		struct une_case *droit;
-		struct une_case *bas;
+        //struct une_case *haut
+		//struct une_case *gauche;
+		//struct une_case *droit;
+		//struct une_case *bas;
 } une_case; 
 // structure pour stocker la position du personnage 
 struct personnage {
@@ -130,7 +130,7 @@ void suppression_historique(historique **p_historique)
 
 
 struct sokoban {
-//	int mode;
+
 	struct une_case la_case [N][N];
 };
 typedef struct sokoban SOKOBAN;

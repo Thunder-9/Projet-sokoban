@@ -26,7 +26,23 @@
 
 int main(int argc, char **argv)
 {
+//init sokoban
+//affichage ...
+
+FILE* fic = fopen(argv[/*argv[fichier]*/ , "r");
+//lancer fonction sur niveau//	
+	
 	
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
 
